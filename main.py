@@ -8,13 +8,20 @@ load_dotenv()
 
 @function_tool()
 def get_user_data(min_age: int) -> dict:
+    """
+        Retrieve user data based on minimum age
+    
+    """
+    
     users = [
         {"name": "markaram", "age": 21},
         {"name": "whistle", "age": 19},
         {"name": "alex", "age": 25},
         {"name": "james", "age": 27}
     ]
+    
     return [user for user in users if user["age"] >= min_age]
+
 
 @function_tool()
 def send_message(number: str, message: str):
