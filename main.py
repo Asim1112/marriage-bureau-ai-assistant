@@ -20,7 +20,14 @@ def get_user_data(min_age: int) -> dict:
         {"name": "james", "age": 27}
     ]
     
-    return [user for user in users if user["age"] >= min_age]
+    filtered_users = []
+    
+    for user in users:
+        if user["age"] >= min_age:
+            filtered_users.append(user)
+
+    return filtered_users
+
 
 
 @function_tool()
